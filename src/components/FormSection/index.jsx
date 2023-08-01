@@ -6,7 +6,7 @@ export const FormSection = ({ balanceList, addBalance }) => {
   return (
     <section className={styles.container}>
       <Form addBalance={(balanceList, addBalance)} />
-      <TotalBalance balanceList={balanceList} />
+      {balanceList < 1 ? null : <TotalBalance balanceList={balanceList} />}
     </section>
   );
 };
